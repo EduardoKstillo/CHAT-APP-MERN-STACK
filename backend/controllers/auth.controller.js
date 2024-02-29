@@ -40,7 +40,7 @@ export const signup = async (req, res) => {
       // Save the new user
       newUser.save();
 
-      generateTokenAndSetCookie(newUser, res);
+      generateTokenAndSetCookie(newUser._id, res);
 
       // Return the newly created user
       res.status(201).json({
@@ -72,7 +72,7 @@ export const login = async (req, res) => {
     }
 
     // Generate token and set cookie
-    generateTokenAndSetCookie(user, res);
+    generateTokenAndSetCookie(user._id, res);
 
     // Return the logged in user
     return res.status(200).json({
