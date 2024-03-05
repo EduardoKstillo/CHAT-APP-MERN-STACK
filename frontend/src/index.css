@@ -3,11 +3,31 @@
 @tailwind utilities;
 
 body {
-  background: rgb(254, 241, 250);
+  background: rgb(146, 231, 255);
   background: linear-gradient(
-    142deg,
-    rgba(254, 241, 250, 1) 0%,
-    rgba(181, 217, 251, 1) 100%
+    352deg,
+    rgba(146, 231, 255, 1) 0%,
+    rgba(171, 213, 222, 1) 23%,
+    rgba(218, 209, 255, 1) 58%,
+    rgba(255, 208, 225, 1) 81%,
+    rgba(255, 192, 192, 1) 100%
   );
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #121212;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #242424;
 }
