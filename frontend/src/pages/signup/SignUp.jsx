@@ -3,7 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import useSignup from "../../hooks/useSingup";
+import { useAuthContext } from "../../context/AuthContext";
 
 const SignUp = () => {
   const [inputs, setInpus] = useState({
@@ -15,7 +15,10 @@ const SignUp = () => {
     gender: "",
   });
 
-  const { loading, signup } = useSignup();
+  const { loading, signup } = useAuthContext();
+
+  //const auth = useAuthContext()
+  
 
   const handleCheckboxChange = (gender) => {
     setInpus({ ...inputs, gender });
@@ -23,6 +26,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // await auth.signup(inputs)
     await signup(inputs);
   };
 
@@ -123,3 +127,16 @@ const SignUp = () => {
   );
 };
 export default SignUp;
+
+// function validate({ fullName, username, password, confirmPassword, gender }) {
+//   if (!fullName || !username || !password || !confirmPassword || !gender) {
+//     toast.error("Please fill in all fields");
+//     return false;
+//   }
+//   // if (password !== confirmPassword) {
+//   //   toast.error("Passwords do not match");
+//   //   return false;
+//   // }
+
+//   return true;
+// }
