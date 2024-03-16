@@ -2,7 +2,7 @@
 
 The following application simulates a chat in real time.
 
-
+👷 I’m currently working on this project ⛏️⛏️⛏️
 
 ## Tech Stack
 
@@ -11,7 +11,3 @@ The following application simulates a chat in real time.
 **Server:** Node, Express, Socket.IO, JWT
 
 **DataBase:** MongoDB
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
