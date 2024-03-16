@@ -3,7 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 const Home = () => {
   return (
-    <div className="flex h-full shadow-xl overflow-hidden">
+    <div className="flex h-full overflow-hidden">
       <Sidebar />
       <MessageContainer />
     </div>

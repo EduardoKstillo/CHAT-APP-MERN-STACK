@@ -9,15 +9,21 @@ import { AuthContextProvider, useAuthContext } from "./context/AuthContext";
 import { Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
-
 function App() {
   const { authUser } = useAuthContext();
   return (
-    <div className="h-screen p-6 items-center">
+    <div className="h-screen items-center">
       <Routes>
-        <Route path="/" element={authUser? <Home /> : <Navigate to={'/login'} />} />
-        <Route path="/login" element={authUser? <Navigate to={'/'} /> : <Login />} />
-        <Route path="/signup" element={authUser? <Navigate to={'/'} /> : <Login />} />
+        {/* <Route path="/" element={authUser? <Home /> : <Navigate to={'/login'} />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={authUser ? <Navigate to={"/"} /> : <Login />}
+        />
+        <Route
+          path="/signup"
+          element={authUser ? <Navigate to={"/"} /> : <SignUp />}
+        />
         <Route path="*" element={<NotFoundError />} />
       </Routes>
       <Toaster />
